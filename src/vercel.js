@@ -15,7 +15,8 @@ const {
 	TRIM_COMMIT_MESSAGE,
 	BUILD_ENV,
 	WORKING_DIRECTORY,
-	FORCE
+	FORCE,
+	PREBUILT
 } = require('./config')
 
 const init = () => {
@@ -38,6 +39,10 @@ const init = () => {
 
 		if (FORCE) {
 			commandArguments.push('--force')
+		}
+
+		if (PREBUILT) {
+			commandArguments.push('--prebuilt')
 		}
 
 		if (commit) {

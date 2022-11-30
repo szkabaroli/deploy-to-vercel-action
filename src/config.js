@@ -92,6 +92,11 @@ const context = {
 		key: 'FORCE',
 		type: 'boolean',
 		default: false
+	}),
+	PREBUILT: parser.getInput({
+		key: 'PREBUILT',
+		type: 'boolean',
+		default: false
 	})
 }
 
