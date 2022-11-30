@@ -15978,6 +15978,11 @@ const context = {
 		key: 'FORCE',
 		type: 'boolean',
 		default: false
+	}),
+	PREBUILT: parser.getInput({
+		key: 'PREBUILT',
+		type: 'boolean',
+		default: false
 	})
 }
 
@@ -16243,7 +16248,8 @@ const {
 	TRIM_COMMIT_MESSAGE,
 	BUILD_ENV,
 	WORKING_DIRECTORY,
-	FORCE
+	FORCE,
+	PREBUILT
 } = __nccwpck_require__(4570)
 
 const init = () => {
@@ -16266,6 +16272,10 @@ const init = () => {
 
 		if (FORCE) {
 			commandArguments.push('--force')
+		}
+
+		if (PREBUILT) {
+			commandArguments.push('--prebuilt')
 		}
 
 		if (commit) {
