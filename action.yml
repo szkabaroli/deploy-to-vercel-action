@@ -1,6 +1,6 @@
 name: 'Deploy to Vercel Action'
 description: 'Deploy your project to Vercel using GitHub Actions. Supports PR previews and GitHub deployments.'
-author: 'BetaHuhn'
+author: 'szkabaroli'
 
 inputs:
   GITHUB_TOKEN:
@@ -74,6 +74,10 @@ inputs:
   WORKING_DIRECTORY:
     description: |
       Working directory for the Vercel CLI
+    required: false
+  PREBUILT:
+    description: |
+      Using the vercel command to deploy a prebuilt Vercel Project, typically with vercel build (default: false).
     required: false
 
 outputs:
