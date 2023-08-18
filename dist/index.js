@@ -16275,7 +16275,7 @@ const init = () => {
 		}
 
 		if (PREBUILT) {
-			commandArguments.push('--prebuilt')
+			commandArguments.push('--prebuilt --archive=tgz')
 		}
 
 		if (commit) {
